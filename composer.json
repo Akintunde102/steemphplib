@@ -1,0 +1,18 @@
+{
+  "name": "steemphplib",
+  "description": "A PHP Library to convert Steem Blockchain data",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "tyraelll",
+      "email": "omeratagun@myself.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Steemit\\": "src/"
+    }
+  }
+
+}
