@@ -12,15 +12,17 @@ namespace SteemitAPI;
 class getVoters
 {
 
-    /**
-     *
-     */
 
     public $url = '';
-    public function apiVoters(){
+    protected $counter = 0;
+    /**
+     * @return bool
+     */
+    public function apiVoters()
+    {
 
-        $this->connect = new apiConnector();
 
     }
 
 }
+?>

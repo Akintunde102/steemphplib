@@ -6,31 +6,37 @@
  * Time: 21:42
  */
 
-namespace SteemitAPI {
+namespace SteemitAPI;
 
 
-    class apiConnector
+/**
+ * @property bool|string apiconnector
+     */
+class apiConnector
     {
 
         public $url = '';
+        public $apijson;
 
         /**
          * apiConnector constructor.
+         * @param $url
          */
-        public function __construct()
+        public function getConnect()
         {
-            $this->url = "";
+            $this->url = "https://api.steemjs.com/get_active_votes?author=omeratagun&permlink=1bf066c7-23cb-11e8-8cbf-0242ac110002";
             $this->apiconnector = file_get_contents($this->url);
-            return $this->apijson = json_decode($this->apiconnector);
+            return $this->apijson = json_decode($this->apiconnector,true);
         }
 
         /**
          * @return bool
          */
-        public function isGetConnected ()
+        public function isGetConnected()
         {
+
             return $this->apijson != null;
+
 
         }
     }
-}

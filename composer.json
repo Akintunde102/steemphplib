@@ -9,10 +9,18 @@
       "email": "omeratagun@myself.com"
     }
   ],
-  "autoload": {
+  "auto-load": {
     "psr-4": {
-      "steemphplib\\": "src/"
+      "SteemitAPI\\": "src/"
     }
-  }
+  },
+  "autoload": {
+    "classmap" : [
+      "src/configuration"
+    ]
 
+},
+  "require-dev": {
+    "phpunit/phpunit": "7"
+  }
 }
