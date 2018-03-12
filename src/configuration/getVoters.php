@@ -8,21 +8,24 @@
 
 namespace SteemitAPI;
 
-
 class getVoters
 {
 
-
-    public $url = '';
-    protected $counter = 0;
     /**
      * @return bool
      */
-    public function apiVoters()
-    {
+    public function getVoterList(){
+        $connector = new apiConnector();
 
+        return $connector->getConnect();
 
     }
+
+
+
+
+
+
 
 }
 ?>

@@ -16,7 +16,9 @@
   },
   "autoload": {
     "classmap" : [
-      "src/configuration"
+      "src/configuration/connection",
+      "src/configuration",
+      "src/configuration/controller"
     ]
 
 },
