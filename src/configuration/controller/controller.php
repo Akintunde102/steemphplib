@@ -12,30 +12,32 @@ namespace SteemitAPI;
 class Controller
 {
 
-    public $url = "";
-    public static $url_input;
+
+    public static $url = '';
+    public static $url_input = "";
 
     /**
-     * Controller constructor.
+     * @param $url
+     * @return string
      */
-    public function inputChecker ()
+    public function setUrl(){
+
+        return Controller::$url;
+
+    }
+    /**
+     * @return string
+     */
+    public function inputChecker () : string
 {
 
-    $url_input = "";
-    $this->url = trim($url_input);
-    $url_input = strtolower($url_input);
-    return Controller::$url_input = $url_input;
+    $filter = trim(Controller::$url);
+    $filter =strtolower(Controller::$url);
+    return Controller::$url_input = $filter;
 
 }
 
-    /**
-     * @return mixed
-     */
-    protected function setURL(){
 
-       $urlcallback = new apiConnector();
-       return Controller::$url_input = $urlcallback->url_input;
 
-}
 
 }

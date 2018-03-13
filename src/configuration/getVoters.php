@@ -20,12 +20,5 @@ class getVoters
         return $connector->getConnect();
 
     }
-
-
-
-
-
-
-
 }
 ?>

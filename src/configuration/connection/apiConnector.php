@@ -9,21 +9,21 @@
 namespace SteemitAPI;
 
 
-/**
- * @property bool|string apiconnector
-     */
+
 class apiConnector
     {
 
-        protected static $url = '';
-        public $url_input = "";
+
+       public static $url_input = "";
 
     /**
      * @return string
      */
+
     public function getURL(){
 
-        return $this->url_input;
+
+        return $this->test = Controller::$url_input = apiConnector::$url_input;
 }
 
     /**
@@ -31,9 +31,9 @@ class apiConnector
      */
     public function getConnect()
         {
-
-            $this->apiconnector = file_get_contents($this->getURL());
-            return $this->json = json_decode($this->apiconnector,true);
+            $connectme = '';
+            $connectme = file_get_contents(apiConnector::$url_input);
+            return $this->json = json_decode($connectme,true);
         }
 
     /**
@@ -54,4 +54,6 @@ class apiConnector
 
         }
 
-    }
+
+
+}

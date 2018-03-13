@@ -11,13 +11,23 @@ include 'H:\xampp\htdocs\steemphplib\vendor\autoload.php';
 
 class testrun{
 
-    public function setURL(){
 
-        $input = new Controller;
-        $input->url = "https://api.steemjs.com/get_active_votes?author=omeratagun&permlink=1bf066c7-23cb-11e8-8cbf-0242ac110002";
+    /**
+     * @return string
+     */
+    static $url = 'https://api.steemjs.com/get_active_votes?author=omeratagun&permlink=1bf066c7-23cb-11e8-8cbf-0242ac110002';
+
+    public static function setURL() : string{
+
+        $dap = new Controller();
+        return Controller::$url = testrun::$url;
+
     }
 
-   public static function getData(){
+    /**
+     * @return string
+     */
+    public static function getData(){
 
        $data = new apiConnector;
        return $data->isGetConnected();
@@ -25,7 +35,11 @@ class testrun{
 
 }
 
-var_dump(testrun::getData());
+
+
+
+$readurl = new apiConnector;
+var_dump($readurl->getConnect());
 
 
 
