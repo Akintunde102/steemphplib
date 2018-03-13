@@ -1,5 +1,5 @@
 {
-  "name": "steemphplib",
+  "name": "omeratagun/steemphplib",
   "description": "A PHP Library to convert Steem Blockchain data",
   "type": "package",
   "license": "MIT",
