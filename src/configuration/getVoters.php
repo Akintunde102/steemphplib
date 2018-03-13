@@ -14,11 +14,10 @@ class getVoters
     /**
      * @return bool
      */
-    public function getVoterList(){
+    public function getVoterList()
+    {
         $connector = new apiConnector();
 
         return $connector->getConnect();
-
     }
 }
-?>
